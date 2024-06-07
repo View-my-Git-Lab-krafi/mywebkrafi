@@ -4,8 +4,7 @@ backend:
 
 publish_mode: simple # Set to editorial_workflow if you want multi-branch workflow
 media_folder: "src/content/posts" # Media files will be stored in the repo under src/content/posts
-public_folder: "./posts" # The src attribute for uploaded media will begin with /content/posts
-default_tag: "['all', 'all', 'all']"
+public_folder: "./" # The src attribute for uploaded media will begin with /content/posts
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
@@ -17,8 +16,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Category", name: "category", widget: "string", default: "you_can_set_one" }
-      - {label: "Tags", name: "tags", widget: "list", default: ["all", "all", "all"]}
-      - {label: "Publish Date", name: "published", widget: "date"}
+      - {label: "Publish Date", name: "published", widget: "string", default: "yy-mm-dd"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
