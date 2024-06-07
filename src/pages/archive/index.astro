@@ -6,6 +6,28 @@ import {i18n} from "@i18n/translation";
 import I18nKey from "@i18n/i18nKey";
 ---
 
+<!DOCTYPE html>
+    <head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+            <script>
+            declare global {
+                interface Window {
+                    netlifyIdentity: any;
+                }
+            }
+
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", ((user: any) => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              }));
+            }
+          </script>
+</html>
 <MainGridLayout title={i18n(I18nKey.archive)}>
     <ArchivePanel></ArchivePanel>
 </MainGridLayout>
