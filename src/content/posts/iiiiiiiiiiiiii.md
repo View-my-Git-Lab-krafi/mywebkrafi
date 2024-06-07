@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/passtag.astro
+layout: ../../layouts/passtag.md
 title: iiiiiiiiiiiiii
 description: nnnnnnnnnnnnn
 category: hyr
