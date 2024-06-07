@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPost.astro
 title: hello
 description: hello discr
 category: hello cata
